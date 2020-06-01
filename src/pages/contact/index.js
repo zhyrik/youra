@@ -1,6 +1,8 @@
 import React from 'react'
 import { navigate } from 'gatsby-link'
+
 import Layout from '../../components/Layout'
+import Socials from '../../components/Socials'
 
 function encode(data) {
   return Object.keys(data)
@@ -39,7 +41,15 @@ export default class Index extends React.Component {
         <section className="section">
           <div className="container">
             <div className="content">
-              <h1>Contact</h1>
+              <h1>Контакти</h1>
+              <p>
+                <a>096 000 00 00</a>
+              </p>
+              <p>
+                <a>zhuriki@ukr.net</a>
+              </p>
+              <Socials />
+              <hr />
               <form
                 name="contact"
                 method="post"
@@ -58,7 +68,7 @@ export default class Index extends React.Component {
                 </div>
                 <div className="field">
                   <label className="label" htmlFor={'name'}>
-                    Your name
+                    Ваше імя
                   </label>
                   <div className="control">
                     <input
@@ -73,7 +83,7 @@ export default class Index extends React.Component {
                 </div>
                 <div className="field">
                   <label className="label" htmlFor={'email'}>
-                    Email
+                    Емейл
                   </label>
                   <div className="control">
                     <input
@@ -88,7 +98,7 @@ export default class Index extends React.Component {
                 </div>
                 <div className="field">
                   <label className="label" htmlFor={'message'}>
-                    Message
+                    Повідомлення
                   </label>
                   <div className="control">
                     <textarea
@@ -102,7 +112,7 @@ export default class Index extends React.Component {
                 </div>
                 <div className="field">
                   <button className="button is-link" type="submit">
-                    Send
+                    Відправити
                   </button>
                 </div>
               </form>

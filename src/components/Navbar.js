@@ -59,17 +59,20 @@ const Navbar = class extends React.Component {
             className={`navbar-menu ${this.state.navBarActiveClass} is-transparent`}
           >
             <div className="navbar-start has-text-centered">
+              <Link className="navbar-item has-text-white" to="/">
+                Головна
+              </Link>
               <Link className="navbar-item has-text-white" to="/about">
-                About
+                Про нас
               </Link>
               <Link className="navbar-item has-text-white" to="/products">
-                Products
+                Послуги
               </Link>
               <Link className="navbar-item has-text-white" to="/blog">
-                Blog
+                Блог
               </Link>
               <Link className="navbar-item has-text-white" to="/contact">
-                Contact
+                Контакти
               </Link>
               <Link
                 className="navbar-item has-text-white"
