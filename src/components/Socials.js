@@ -3,12 +3,15 @@ import React from 'react'
 import facebook from '../img/social/facebook.svg'
 import instagram from '../img/social/instagram.svg'
 import twitter from '../img/social/twitter.svg'
-import vimeo from '../img/social/vimeo.svg'
+import mail from '../img/social/mail.svg'
 
 export default function Socials() {
   return (
     <div className="column is-4 social">
-      <a title="facebook" href="https://facebook.com">
+      <a
+        title="facebook"
+        href="https://www.facebook.com/profile.php?id=100009417321294"
+      >
         <img
           src={facebook}
           alt="Facebook"
@@ -23,15 +26,15 @@ export default function Socials() {
           style={{ width: '1em', height: '1em' }}
         />
       </a>
-      <a title="instagram" href="https://instagram.com">
+      <a title="instagram" href="https://www.instagram.com/hutsul_mountains/">
         <img
           src={instagram}
           alt="Instagram"
           style={{ width: '1em', height: '1em' }}
         />
       </a>
-      <a title="vimeo" href="https://vimeo.com">
-        <img src={vimeo} alt="Vimeo" style={{ width: '1em', height: '1em' }} />
+      <a title="vimeo" href="mailto:hutsulmountains@gmail.com">
+        <img src={mail} alt="Vimeo" style={{ width: '1em', height: '1em' }} />
       </a>
     </div>
   )

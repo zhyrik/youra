@@ -74,12 +74,6 @@ const Navbar = class extends React.Component {
               <Link className="navbar-item has-text-white" to="/contact">
                 Контакти
               </Link>
-              <Link
-                className="navbar-item has-text-white"
-                to="/contact/examples"
-              >
-                Form Examples
-              </Link>
             </div>
             <div className="navbar-end has-text-centered">
               <a
