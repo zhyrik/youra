@@ -3,8 +3,9 @@ import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
-import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
+
+import CardGridWrap from '../components/cards/CardGridWrap'
 
 export const IndexPageTemplate = ({
   image,
@@ -14,6 +15,7 @@ export const IndexPageTemplate = ({
   mainpitch,
   description,
   intro,
+  edges,
 }) => (
   <div>
     <div className="top-background-z">
@@ -51,7 +53,7 @@ export const IndexPageTemplate = ({
                     <p>{description}</p>
                   </div>
                 </div>
-                <Features gridItems={intro.blurbs} />
+                <CardGridWrap edges={edges} />
                 <div className="columns">
                   <div className="column is-12 has-text-centered">
                     <Link className="btn" to="/products">
@@ -93,6 +95,7 @@ IndexPageTemplate.propTypes = {
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
+  const { edges } = data.allMarkdownRemark
 
   return (
     <Layout>
@@ -104,6 +107,7 @@ const IndexPage = ({ data }) => {
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
         intro={frontmatter.intro}
+        edges={edges}
       />
     </Layout>
   )
@@ -151,6 +155,24 @@ export const pageQuery = graphql`
           }
           heading
           description
+        }
+      }
+    }
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            templateKey
+            title
+            description
+            featuredimage {
+              childImageSharp {
+                fluid(maxWidth: 400, quality: 64) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
         }
       }
     }
