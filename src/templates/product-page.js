@@ -22,6 +22,7 @@ export const ProductPageTemplate = ({
     <div className="top-background-z">
       <img
         src={!!image.childImageSharp ? image.childImageSharp.fluid.src : image}
+        alt={title.slice(0, 25)}
       />
 
       <div className="top-background-overlay">

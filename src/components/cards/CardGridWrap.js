@@ -9,7 +9,11 @@ export default function CardGridWrap({ edges }) {
   return (
     <div className="wrap-grid-z">
       {productEdges.map(({ node }) => (
-        <ProductCard data={node.frontmatter} key={node.frontmatter.title} />
+        <ProductCard
+          data={node.frontmatter}
+          fields={node.fields}
+          key={node.frontmatter.title}
+        />
       ))}
     </div>
   )

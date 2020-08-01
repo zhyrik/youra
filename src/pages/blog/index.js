@@ -17,7 +17,7 @@ export default class BlogIndexPage extends React.Component {
                 color: 'white',
               }}
             >
-              bkog
+              Блог
             </h1>
           </div>
         </div>
